@@ -6,8 +6,31 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Text colors */
+  --text-50: #FFF5EB;
+  --text-100: #FFEBD6;
+  --text-200: #FFD6AD;
+  --text-300: #FFC285;
+  --text-400: #FFAD5C;
+  --text-500: #FF9933;
+  --text-600: #F57A00;
+  --text-700: #B85C00;
+  --text-800: #7A3D00;
+  --text-900: #3D1F00;
+  --text-950: #1F0F00;
+
+  /* Background colors */
+  --bg-50: #EAEEF1;
+  --bg-100: #D2DAE0;
+  --bg-200: #A4B5C1;
+  --bg-300: #7A93A4;
+  --bg-400: #556C7C;
+  --bg-500: #36454F;
+  --bg-600: #2B3840;
+  --bg-700: #212A30;
+  --bg-800: #151A1E;
+  --bg-900: #0A0D0F;
+  --bg-950: #060809;
 }
 
 @media (prefers-color-scheme: dark) {

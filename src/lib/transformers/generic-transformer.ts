@@ -52,7 +52,6 @@ function generateClass(
   const properties = Object.entries(json)
     .map(([key, value]) => {
       const type = getType(value, config, typeof value === 'object' ? capitalizeFirstLetter(key) : undefined);
-      const name = config.formatters.propertyName(key, useGettersSetters);
       return config.templates.PROPERTY_TEMPLATE
         .replace(/{type}/g, type)
         .replace(/{name}/g, key)

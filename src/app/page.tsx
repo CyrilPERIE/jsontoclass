@@ -25,6 +25,7 @@ export default function Home() {
         setOutput("");
       }
     } catch (error) {
+      console.error('Error transforming JSON: ', error);
       setOutput(selectedLanguage === Language.PYTHON ? "# Invalid JSON" : "// Invalid JSON");
     }
   };

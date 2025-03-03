@@ -149,17 +149,17 @@ export function generateClass(
 export function findNestedObjects(json: JsonObject): Map<string, JsonObject> {
   const objects = new Map<string, JsonObject>();
 
-  function explore(obj: JsonObject, parentKey: string) {
+  function explore(obj: JsonObject) {
     for (const [key, value] of Object.entries(obj)) {
       if (value && typeof value === "object" && !Array.isArray(value)) {
         const className = capitalizeFirstLetter(key);
         objects.set(className, value as JsonObject);
-        explore(value as JsonObject, key);
+        explore(value as JsonObject);
       }
     }
   }
 
-  explore(json, "root");
+  explore(json);
   return objects;
 }
 
